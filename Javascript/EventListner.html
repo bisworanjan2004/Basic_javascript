@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            padding: 10px 14px;
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><h2>This is a Heading</h2>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, dolores. Laborum corrupti delectus optio voluptatibus, sed temporibus harum explicabo perspiciatis obcaecati maxime aspernatur aliquid minus impedit id atque ut voluptatem modi itaque molestiae sint deserunt accusamus dolor a. Sapiente, corporis ipsa? Aspernatur voluptatum enim atque saepe adipisci laborum sequi fugit, accusantium libero soluta debitis culpa corrupti illo, quaerat vero sapiente temporibus. Deleniti consequuntur vel nulla, harum, rerum nemo beatae impedit, dolor animi delectus alias dignissimos cum. Dolorum molestiae molestias animi maiores omnis illo autem laudantium, tempora quasi recusandae facere fuga.</p>
+    </div>
+    <button id="btn" onclick="togglehide()">Show/Hide</button>
+    <script>
+        let para=document.getElementById('para');
+        para.addEventListener('mouseover', function run(){
+            console.log("Mouse Inside")
+        });
+        para.addEventListener('mouseout', function run(){
+            console.log("Mouse Out")
+        });
+        function togglehide(){
+            let btn=document.getElementById('btn');
+            let para=document.getElementById('para');
+            // let para=2;//it will not be exicuted as it has been already overriden by some value , so it will show the errer message 
+            if(para.style.display!='none'){//an can be run without any variable as it identified to the global variable and points to that while exicuting
+                para.style.display='none';
+            }
+            else{
+                para.style.display='block';
+            }
+           
+        }
+    </script>
+</body>
+</html>

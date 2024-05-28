@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIme and Date making</title>
+    <style>
+        .container{
+            font-size: 23px;
+            background-color: rgb(165, 158, 147);
+            border: 2px solid gray;
+            padding: 40px;
+            margin: 5px;
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is a New Time</h2>
+   <div class="container"> Now the time is <span id="time"></span>
+    <!-- Now the time is <div id="time"></div> --></div>
+
+    <script>
+        // function displayTime(){
+        //     time=new Date();
+        //     console.log(time);
+        //     document.getElementById('time').innerHTML=time;
+        // }
+        // setInterval(displayTime,1000);
+
+        // let now=new Date();
+        // console.log(now);
+        // let n=new Date(1000);
+        // console.log(n);
+
+        let newDate=new Date(3020,4,5,8,3,3,12);
+        console.log(newDate);
+        let yr=newDate.getFullYear();
+        console.log("The year is ", yr);
+
+        let dates=newDate.getDate();
+        console.log(dates);
+
+        let hours=newDate.getMonth();
+        console.log(hours);
+        let minutes=newDate.getMinutes();
+        console.log(minutes);
+        let seconds=newDate.getSeconds();
+        console.log(seconds);
+       
+         newDate.setDate(9);
+        newDate.setMinutes(29);
+        console.log(newDate);
+
+        setInterval(updateTime,1000);
+
+        function updateTime(){
+            time.innerHTML=new Date();
+        }
+        </script>
+        
+</body>
+</html>
